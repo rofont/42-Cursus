@@ -1,15 +1,14 @@
 #include <ctype.h>
 #include <stdio.h>
 
-int ft_isalnum (int c);
+int ft_isprint(int c);
 
 int main (void)
 {
-    int a = '5';
+  int a = 59;
+  printf("%d\n", ft_isprint(a));
 
-    printf("%d\n", ft_isalnum(a));
-
-    int b = '5';
-    printf("%d\n", isalnum(b));
-    return (0);
+  int b = 59;
+  printf("%d\n", isprint(b));
+  return (0);
 }
