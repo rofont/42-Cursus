@@ -6,13 +6,13 @@
 /*   By: romainfontaine <romainfontaine@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 09:23:45 by romainfonta       #+#    #+#             */
-/*   Updated: 2022/10/18 19:56:00 by romainfonta      ###   ########.fr       */
+/*   Updated: 2022/10/19 09:15:46 by romainfonta      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int ft_isalpha (int c)
 {
-    if ((c >= 101 && c <= 132) || (c >= 141 && c <= 172))
-        return (c);
+    if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+        return (1);
     return (0);
 }

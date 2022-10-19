@@ -6,13 +6,13 @@
 /*   By: romainfontaine <romainfontaine@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 11:04:22 by romainfonta       #+#    #+#             */
-/*   Updated: 2022/10/18 19:55:58 by romainfonta      ###   ########.fr       */
+/*   Updated: 2022/10/19 09:33:16 by romainfonta      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int isdigit (int c)
+int ft_isdigit (int c)
 {
-    if (c >= '0' && c <= '9')
-        return (c);
+    if (c >= 48 && c <= 57)
+        return (1);
     return (0);
 }
