@@ -1,31 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Test.c                                             :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: romainfontaine <romainfontaine@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/20 16:25:11 by romainfonta       #+#    #+#             */
-/*   Updated: 2022/10/21 08:57:50 by romainfonta      ###   ########.fr       */
+/*   Created: 2022/10/19 11:55:21 by romainfonta       #+#    #+#             */
+/*   Updated: 2022/10/19 12:03:44 by romainfonta      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
-#include <string.h>
-#include <strings.h>
-
-void *ft_memcpy(void *dest, void *src, size_t n);
-
-int main (void)
+int ft_isascii (int c)
 {
-  //char a[150] = "Salut Les terriens";
-  //char c[150] = "Paul va bien"
-  //int le = 4;
-  //printf("%s\n", ft_memcpy(a, c, le));
-
-  char b[150] = "Salut Les terriens";
-  char d[] = "Paul";
-  int len = 4;
-  printf("%s\n", memccpy(b, d, len));
+    if (c >= 0 && c <=127)
+        return (1);
+    return (0);
 }
