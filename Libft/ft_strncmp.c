@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: romainfontaine <romainfontaine@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/21 09:03:28 by romainfonta       #+#    #+#             */
-/*   Updated: 2022/10/21 15:31:13 by romainfonta      ###   ########.fr       */
+/*   Created: 2022/10/21 16:30:38 by romainfonta       #+#    #+#             */
+/*   Updated: 2022/10/21 16:46:35 by romainfonta      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int    ft_strlcpy(char *dest, char *src, unsigned int size)
+int ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-    unsigned int    i;
+    unsigned int i;
 
     i = 0;
-	if (size < 1)
-		return(i);
-	while (src[i -1] != '\0' || i <= size)
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = '\0';
-    return (i);
+    while (i < n && (s1[i] != '\0' || s2[i] != '\0'))
+    {
+        if ((s1[i] > s2[i]) || (s1[i] < s2[i]))
+            return (s1[i] - s2[i]);
+        i++;
+    }
+    return (0);
 }

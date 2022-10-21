@@ -6,7 +6,7 @@
 /*   By: romainfontaine <romainfontaine@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 16:25:11 by romainfonta       #+#    #+#             */
-/*   Updated: 2022/10/21 08:57:50 by romainfonta      ###   ########.fr       */
+/*   Updated: 2022/10/21 16:47:19 by romainfonta      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,17 @@
 #include <string.h>
 #include <strings.h>
 
-void *ft_memcpy(void *dest, void *src, size_t n);
+int ft_strncmp(char *s1, char *s2, unsigned int n);
 
 int main (void)
 {
-  //char a[150] = "Salut Les terriens";
-  //char c[150] = "Paul va bien"
-  //int le = 4;
-  //printf("%s\n", ft_memcpy(a, c, le));
+  char a[150] = "Salut Les terriens";
+  char b[150] = "Salut";
+  unsigned int c = 3;
+  printf("%d\n", ft_strncmp(a, b, c));
 
-  char b[150] = "Salut Les terriens";
-  char d[] = "Paul";
-  int len = 4;
-  printf("%s\n", memccpy(b, d, len));
+  char d[150] = "Salut Les terriens";
+  char e[150] = "Salut";
+  unsigned int f = 3;
+  printf("%d\n", strncmp(d, e, f));
 }

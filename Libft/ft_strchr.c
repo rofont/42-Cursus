@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: romainfontaine <romainfontaine@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/21 09:03:28 by romainfonta       #+#    #+#             */
-/*   Updated: 2022/10/21 15:31:13 by romainfonta      ###   ########.fr       */
+/*   Created: 2022/10/21 15:53:09 by romainfonta       #+#    #+#             */
+/*   Updated: 2022/10/21 16:18:43 by romainfonta      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int    ft_strlcpy(char *dest, char *src, unsigned int size)
+char *ft_strchr(char *s, int c)
 {
-    unsigned int    i;
+    int i;
 
     i = 0;
-	if (size < 1)
-		return(i);
-	while (src[i -1] != '\0' || i <= size)
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = '\0';
-    return (i);
+    while (s[i] != c)
+    {
+        if (s[i] == '\0')
+            return(0);
+        i++;
+    }
+    return (&s[i]);
 }
