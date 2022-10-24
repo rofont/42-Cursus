@@ -3,23 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: romainfontaine <romainfontaine@student.    +#+  +:+       +#+        */
+/*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 15:53:09 by romainfonta       #+#    #+#             */
-/*   Updated: 2022/10/21 16:18:43 by romainfonta      ###   ########.fr       */
+/*   Updated: 2022/10/24 16:59:26 by rofontai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strchr(char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (s[i] != c)
-    {
-        if (s[i] == '\0')
-            return(0);
-        i++;
-    }
-    return (&s[i]);
+	i = 0;
+	while (s[i] != c)
+	{
+		if (s[i] == '\0')
+			return (0);
+		i++;
+	}
+	return (&s[i]);
 }

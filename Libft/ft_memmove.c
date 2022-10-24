@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/20 16:11:27 by romainfonta       #+#    #+#             */
-/*   Updated: 2022/10/24 14:04:40 by rofontai         ###   ########.fr       */
+/*   Created: 2022/10/24 12:27:13 by rofontai          #+#    #+#             */
+/*   Updated: 2022/10/24 13:25:04 by rofontai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_toupper(int c)
+#include "libft.h"
+
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	if (c >= 97 && c <= 122)
-		return (c - 32);
-	return (c);
+	unsigned int	i;
+
+	i = 0;
+	while (i < len)
+	{
+		((char *)dst)[i] = ((char *)src)[i];
+		i++;
+	}
+	return (dst);
 }

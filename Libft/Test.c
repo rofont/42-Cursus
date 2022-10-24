@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: romainfontaine <romainfontaine@student.    +#+  +:+       +#+        */
+/*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 16:25:11 by romainfonta       #+#    #+#             */
-/*   Updated: 2022/10/21 16:47:19 by romainfonta      ###   ########.fr       */
+/*   Updated: 2022/10/24 16:38:07 by rofontai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,17 @@
 #include <stdio.h>
 #include <string.h>
 #include <strings.h>
-
-int ft_strncmp(char *s1, char *s2, unsigned int n);
+#include "libft.h"
 
 int main (void)
 {
   char a[150] = "Salut Les terriens";
-  char b[150] = "Salut";
-  unsigned int c = 3;
-  printf("%d\n", ft_strncmp(a, b, c));
+  char b[150] = "Poule";
+  unsigned int c = 20;
+  printf("%s\n",ft_memmove(a, b, c));
 
   char d[150] = "Salut Les terriens";
-  char e[150] = "Salut";
-  unsigned int f = 3;
-  printf("%d\n", strncmp(d, e, f));
+  int e = 15;
+  unsigned int f = 20;
+  printf("%s\n", memchr(d, e, f));
 }
