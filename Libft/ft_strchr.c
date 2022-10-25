@@ -6,20 +6,22 @@
 /*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 15:53:09 by romainfonta       #+#    #+#             */
-/*   Updated: 2022/10/24 16:59:26 by rofontai         ###   ########.fr       */
+/*   Updated: 2022/10/25 14:23:45 by rofontai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strchr(const char *s, int c)
 {
-	int	i;
+	int		i;
+	char	t;
 
 	i = 0;
-	while (s[i] != c)
+	t = c;
+	while (s[i] != t)
 	{
 		if (s[i] == '\0')
 			return (0);
 		i++;
 	}
-	return (&s[i]);
+	return ((char *)&s[i]);
 }

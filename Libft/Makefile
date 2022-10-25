@@ -6,7 +6,7 @@
 #    By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/24 16:49:17 by rofontai          #+#    #+#              #
-#    Updated: 2022/10/25 08:48:46 by rofontai         ###   ########.fr        #
+#    Updated: 2022/10/25 15:29:00 by rofontai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ SRC	= 	ft_memmove.c \
 		ft_isdigit.c \
 		ft_toupper.c \
 		ft_memset.c \
-		ft_strrchr.c \
+		ft_strchr.c \
 		ft_strlen.c \
 		ft_strlcpy.c \
 		ft_tolower.c \
@@ -27,6 +27,10 @@ SRC	= 	ft_memmove.c \
 		ft_strrchr.c \
 		ft_strlcat.c \
 		ft_isprint.c \
+		ft_memchr.c \
+		ft_bzero.c \
+		ft_memcpy.c \
+		ft_memcmp.c \
 
 
 

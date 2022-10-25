@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/20 16:57:32 by romainfonta       #+#    #+#             */
-/*   Updated: 2022/10/25 15:39:19 by rofontai         ###   ########.fr       */
+/*   Created: 2022/10/25 15:18:45 by rofontai          #+#    #+#             */
+/*   Updated: 2022/10/25 15:34:05 by rofontai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t	i;
-	char	*temp;
+	size_t			i;
+	unsigned char	*temp1;
+	unsigned char	*temp2;
 
+	temp1 = (unsigned char *)s1;
+	temp2 = (unsigned char *)s2;
 	i = 0;
-	temp = (char *)s;
 	while (i < n)
 	{
-		temp[i] = '\0';
+		if ((temp1[i] > temp2[i]) || (temp1[i] < temp2[i]))
+			return (temp1[i] - temp2[i]);
 		i++;
 	}
+	return (0);
 }
