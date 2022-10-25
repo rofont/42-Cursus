@@ -6,7 +6,7 @@
 #    By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/24 16:49:17 by rofontai          #+#    #+#              #
-#    Updated: 2022/10/24 17:02:38 by rofontai         ###   ########.fr        #
+#    Updated: 2022/10/25 08:48:46 by rofontai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +26,7 @@ SRC	= 	ft_memmove.c \
 		ft_strncmp.c \
 		ft_strrchr.c \
 		ft_strlcat.c \
+		ft_isprint.c \
 
 
 

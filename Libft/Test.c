@@ -6,7 +6,7 @@
 /*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 16:25:11 by romainfonta       #+#    #+#             */
-/*   Updated: 2022/10/24 16:38:07 by rofontai         ###   ########.fr       */
+/*   Updated: 2022/10/25 09:46:23 by rofontai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,17 @@
 #include <strings.h>
 #include "libft.h"
 
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
+
 int main (void)
 {
   char a[150] = "Salut Les terriens";
   char b[150] = "Poule";
-  unsigned int c = 20;
-  printf("%s\n",ft_memmove(a, b, c));
+  unsigned int c = 0;
+  printf("%zu\n",ft_strlcat(a, b, c));
 
   char d[150] = "Salut Les terriens";
-  int e = 15;
-  unsigned int f = 20;
-  printf("%s\n", memchr(d, e, f));
+  char e[150] = "Poule";
+  unsigned int f = 0;
+  printf("%lu\n", strlcat(d, e, f));
 }

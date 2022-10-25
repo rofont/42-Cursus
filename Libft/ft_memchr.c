@@ -6,7 +6,7 @@
 /*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 16:19:36 by rofontai          #+#    #+#             */
-/*   Updated: 2022/10/24 16:43:54 by rofontai         ###   ########.fr       */
+/*   Updated: 2022/10/25 10:53:34 by rofontai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	int i;
-	char *temp = (char *)s;
+	int		i;
+	char	*temp;
 
-
+	temp = (char *)s;
 	i = 0;
 	while (temp[i] != '\0')
 	{
