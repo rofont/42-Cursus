@@ -6,7 +6,7 @@
 #    By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/24 16:49:17 by rofontai          #+#    #+#              #
-#    Updated: 2022/10/25 15:29:00 by rofontai         ###   ########.fr        #
+#    Updated: 2022/10/26 10:16:51 by rofontai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,6 +31,8 @@ SRC	= 	ft_memmove.c \
 		ft_bzero.c \
 		ft_memcpy.c \
 		ft_memcmp.c \
+		ft_strnstr.c \
+		ft_atoi.c \
 
 
 
