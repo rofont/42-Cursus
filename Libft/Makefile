@@ -3,38 +3,37 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+         #
+#    By: romainfontaine <romainfontaine@student.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/24 16:49:17 by rofontai          #+#    #+#              #
-#    Updated: 2022/10/26 10:16:51 by rofontai         ###   ########.fr        #
+#    Updated: 2022/10/26 21:34:20 by romainfonta      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-SRC	= 	ft_memmove.c \
-		ft_isalpha.c \
-		ft_isalnum.c \
-		ft_isascii.c \
-		ft_isdigit.c \
-		ft_toupper.c \
-		ft_memset.c \
-		ft_strchr.c \
-		ft_strlen.c \
-		ft_strlcpy.c \
-		ft_tolower.c \
-		ft_strncmp.c \
-		ft_strrchr.c \
-		ft_strlcat.c \
-		ft_isprint.c \
-		ft_memchr.c \
-		ft_bzero.c \
-		ft_memcpy.c \
-		ft_memcmp.c \
-		ft_strnstr.c \
-		ft_atoi.c \
-
-
+SRC = 	ft_atoi.c		\
+		ft_bzero.c		\
+		ft_calloc.c		\
+		ft_isalnum.c	\
+		ft_isalpha.c	\
+		ft_isascii.c	\
+		ft_isdigit.c	\
+		ft_isprint.c	\
+		ft_memchr.c		\
+		ft_memcmp.c		\
+		ft_memcpy.c		\
+		ft_memmove.c	\
+		ft_memset.c		\
+		ft_strchr.c		\
+		ft_strlcat.c	\
+		ft_strlcpy.c	\
+		ft_strlen.c		\
+		ft_strncmp.c	\
+		ft_strnstr.c	\
+		ft_strrchr.c	\
+		ft_tolower.c	\
+		ft_toupper.c	\
 
 OBJS = $(SRC:.c=.o)
 
