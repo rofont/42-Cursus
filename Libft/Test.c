@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
+/*   By: romainfontaine <romainfontaine@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 16:25:11 by romainfonta       #+#    #+#             */
-/*   Updated: 2022/10/26 09:26:54 by rofontai         ###   ########.fr       */
+/*   Updated: 2022/10/27 21:10:57 by romainfonta      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,117 @@
 #include <strings.h>
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
-
-int main (void)
+/*ft_atoi
+/int main(void)
 {
-  // char a[150] = "Salut Les terriens";
-  // char b[150] = "Poule";
-  // unsigned int c = 0;
-  // printf("%zu\n",ft_strlcat(a, b, c));
+  char  *t = "123456789";
+  char  *t1 = " -12345abc";
+  char  *t2 = " \t -+1245";
 
-  char d[150] = "Salut Les terriens";
-  char e[150] = "lut";
-  unsigned int f = 5;
-  printf("%s\n", strnstr(d, e, f));
-}
+  printf("%d\n", atoi(t));
+  printf("%d\n", ft_atoi(t));
+  printf("\n");
+  printf("%d\n", atoi(t1));
+  printf("%d\n", ft_atoi(t1));
+  printf("\n");
+  printf("%d\n", atoi(t2));
+  printf("%d\n", ft_atoi(t2));
+
+  return(0);
+}*/
+
+/*ft_bzero
+int main(void)
+{
+  char  *t = "HelloWorld";
+  char  *t1 = "Hello All World";
+  char  *t2 = "Pour 42 tout va bien";
+
+  printf("%s\n", bzero(t, 5));
+  printf("%s\n", ft_bzero(t, 5));
+  printf("\n");
+  printf("%s\n", bzero(t1, 0));
+  printf("%s\n", ft_bzero(t1, 0));
+  printf("\n");
+  printf("%s\n", bzero(t2, 22));
+  printf("%s\n", ft_bzero(t2, 22));
+
+  return(0);
+}*/
+
+/*ft_isalnum
+int main(void)
+{
+  int a = 'b';
+  int b = 'F';
+  int c = '\t';
+
+  printf("%d\n", isalnum(a));
+  printf("%d\n", ft_isalnum(a));
+  printf("\n");
+  printf("%d\n", isalnum(b));
+  printf("%d\n", ft_isalnum(b));
+  printf("\n");
+  printf("%d\n", isalnum(c));
+  printf("%d\n", ft_isalnum(c));
+
+  return(0);
+}*/
+
+/*ft_isalpha
+int main(void)
+{
+  int a = 'b';
+  int b = '9';
+  int c = '\t';
+
+  printf("%d\n", isalpha(a));
+  printf("%d\n", ft_isalpha(a));
+  printf("\n");
+  printf("%d\n", isalpha(b));
+  printf("%d\n", ft_isalpha(b));
+  printf("\n");
+  printf("%d\n", isalpha(c));
+  printf("%d\n", ft_isalpha(c));
+
+  return(0);
+}*/
+
+/*ft_isascii
+int main(void)
+{
+  int a = 'b';
+  int b = '9';
+  int c = 250;
+
+  printf("%d\n", isascii(a));
+  printf("%d\n", ft_isascii(a));
+  printf("\n");
+  printf("%d\n", isascii(b));
+  printf("%d\n", ft_isascii(b));
+  printf("\n");
+  printf("%d\n", isascii(c));
+  printf("%d\n", ft_isascii(c));
+
+  return(0);
+}*/
+
+/*ft_isdigit
+int main(void)
+{
+  int a = '5';
+  int b = 'a';
+  int c = 250;
+
+  printf("%d\n", isdigit(a));
+  printf("%d\n", ft_isdigit(a));
+  printf("\n");
+  printf("%d\n", isdigit(b));
+  printf("%d\n", ft_isdigit(b));
+  printf("\n");
+  printf("%d\n", isdigit(c));
+  printf("%d\n", ft_isdigit(c));
+
+  return(0);
+}*/
+

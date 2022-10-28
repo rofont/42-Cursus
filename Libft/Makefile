@@ -6,7 +6,7 @@
 #    By: romainfontaine <romainfontaine@student.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/24 16:49:17 by rofontai          #+#    #+#              #
-#    Updated: 2022/10/26 21:34:20 by romainfonta      ###   ########.fr        #
+#    Updated: 2022/10/27 14:12:06 by romainfonta      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +26,7 @@ SRC = 	ft_atoi.c		\
 		ft_memmove.c	\
 		ft_memset.c		\
 		ft_strchr.c		\
+		ft_strdup.c		\
 		ft_strlcat.c	\
 		ft_strlcpy.c	\
 		ft_strlen.c		\
@@ -34,6 +35,7 @@ SRC = 	ft_atoi.c		\
 		ft_strrchr.c	\
 		ft_tolower.c	\
 		ft_toupper.c	\
+		ft_substr.c		\
 
 OBJS = $(SRC:.c=.o)
 
