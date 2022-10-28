@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: romainfontaine <romainfontaine@student.    +#+  +:+       +#+        */
+/*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 16:25:11 by romainfonta       #+#    #+#             */
-/*   Updated: 2022/10/27 21:10:57 by romainfonta      ###   ########.fr       */
+/*   Updated: 2022/10/28 09:55:08 by rofontai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,3 +130,18 @@ int main(void)
   return(0);
 }*/
 
+/*ft_substr
+int main(void)
+{
+  char *t = "Hello World";
+  char *t1 = "Par ici la monaie";
+  char *t2 = "Keep calm and fast swim";
+
+  printf("%s\n", ft_substr(t, 3, 15));
+  printf("\n");
+  printf("%s\n", ft_substr(t1, 5, 5));
+  printf("\n");
+  printf("%s\n", ft_substr(t2, 14, 11));
+
+  return (0);
+}*/
