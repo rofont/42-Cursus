@@ -6,7 +6,7 @@
 #    By: romainfontaine <romainfontaine@student.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/24 16:49:17 by rofontai          #+#    #+#              #
-#    Updated: 2022/10/27 14:12:06 by romainfonta      ###   ########.fr        #
+#    Updated: 2022/10/29 11:39:13 by romainfonta      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,6 +36,10 @@ SRC = 	ft_atoi.c		\
 		ft_tolower.c	\
 		ft_toupper.c	\
 		ft_substr.c		\
+		ft_putchar_fd.c	\
+		ft_putstr_fd.c	\
+		ft_putnbr_fd.c	\
+		ft_putendl_fd.c	\
 
 OBJS = $(SRC:.c=.o)
 

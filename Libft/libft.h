@@ -6,7 +6,7 @@
 /*   By: romainfontaine <romainfontaine@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 12:54:10 by rofontai          #+#    #+#             */
-/*   Updated: 2022/10/27 14:11:53 by romainfonta      ###   ########.fr       */
+/*   Updated: 2022/10/29 11:44:00 by romainfonta      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 
 # include <stdlib.h>
+# include <unistd.h>
 
 /* Fonction void */
 void	ft_bzero(void *s, size_t n);
@@ -21,6 +22,10 @@ void	*ft_memchr(const void *s, int c, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memmove(void *dst, const void *src, size_t len);
 void	*ft_memset(void *b, int c, size_t len);
+void 	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
+void	ft_putendl_fd(char *s, int fd);
 
 /* Fonction size_t */
 
@@ -46,6 +51,7 @@ char	*ft_strchr(const char *s, int c);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+
 /* Fonction avec malloc */
 
 void	*ft_calloc(size_t count, size_t size);

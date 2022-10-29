@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
+/*   By: romainfontaine <romainfontaine@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 16:25:11 by romainfonta       #+#    #+#             */
-/*   Updated: 2022/10/28 09:55:08 by rofontai         ###   ########.fr       */
+/*   Updated: 2022/10/29 14:02:23 by romainfonta      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #include "libft.h"
 
 /*ft_atoi
-/int main(void)
+int main(void)
 {
   char  *t = "123456789";
   char  *t1 = " -12345abc";
@@ -145,3 +145,14 @@ int main(void)
 
   return (0);
 }*/
+
+/*ft_putchar_fd
+int main(void)
+{
+  char c = 'a';
+  char c1 = '1';
+  char c2 = ' ';
+
+  return (0);
+}*/
+
