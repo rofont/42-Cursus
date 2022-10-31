@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: romainfontaine <romainfontaine@student.    +#+  +:+       +#+         #
+#    By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/24 16:49:17 by rofontai          #+#    #+#              #
-#    Updated: 2022/10/29 11:39:13 by romainfonta      ###   ########.fr        #
+#    Updated: 2022/10/31 14:18:06 by rofontai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,6 +40,8 @@ SRC = 	ft_atoi.c		\
 		ft_putstr_fd.c	\
 		ft_putnbr_fd.c	\
 		ft_putendl_fd.c	\
+		ft_strjoin.c	\
+		ft_strtrim.c	\
 
 OBJS = $(SRC:.c=.o)
 

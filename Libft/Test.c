@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: romainfontaine <romainfontaine@student.    +#+  +:+       +#+        */
+/*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 16:25:11 by romainfonta       #+#    #+#             */
-/*   Updated: 2022/10/29 14:02:23 by romainfonta      ###   ########.fr       */
+/*   Updated: 2022/10/31 14:56:40 by rofontai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -156,3 +156,26 @@ int main(void)
   return (0);
 }*/
 
+/*ft_strjoin
+int main(void)
+{
+  char *t = "Hello World";
+  char *t1 = "Par ici la monaie";
+  char *t2 = "Keep calm and fast swim";
+
+  printf("%s\n", ft_strjoin(t, t2));
+  printf("\n");
+  printf("%s\n", ft_strjoin(t1, t2));
+  printf("\n");
+  printf("%s\n", ft_strjoin(t, t1));
+
+  return (0);
+}*/
+
+/*ft_strtrim*/
+int main()
+{
+	printf("%s\n", ft_strtrim("abcqabc", "abc"));
+	printf("%s\n", ft_strtrim("xavocadoxyz", "xyz"));
+	return (0);
+}
