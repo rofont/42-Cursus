@@ -3,15 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: romainfontaine <romainfontaine@student.    +#+  +:+       +#+        */
+/*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 10:15:50 by rofontai          #+#    #+#             */
-/*   Updated: 2022/10/29 11:25:18 by romainfonta      ###   ########.fr       */
+/*   Updated: 2022/11/01 11:16:30 by rofontai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*The atoi() function converts the initial portion of the string pointed to by
-str to int representation.*/
+/* ATOI permet de transformer une chaîne de caractères, représentant une valeur
+entière, en une valeur numérique de type int.
+Valeur de retour :
+	Si la chaîne à convertir ne contient pas une donnée numérique entière,
+la valeur 0 vous sera retournée.
+	Sinon, une valeur de type int équivalente à la chaîne passée en paramètre
+vous sera retournée. */
 
 int	ft_atoi(const char *str)
 {
