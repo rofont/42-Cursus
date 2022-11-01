@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
+/*   By: romainfontaine <romainfontaine@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 16:25:11 by romainfonta       #+#    #+#             */
-/*   Updated: 2022/10/31 14:56:40 by rofontai         ###   ########.fr       */
+/*   Updated: 2022/10/31 21:49:12 by romainfonta      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -173,9 +173,10 @@ int main(void)
 }*/
 
 /*ft_strtrim*/
-int main()
+int main(void)
 {
 	printf("%s\n", ft_strtrim("abcqabc", "abc"));
 	printf("%s\n", ft_strtrim("xavocadoxyz", "xyz"));
+  printf("%s\n", ft_strtrim("", ""));
 	return (0);
 }
