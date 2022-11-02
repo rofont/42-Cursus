@@ -6,12 +6,13 @@
 /*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 08:43:01 by romainfonta       #+#    #+#             */
-/*   Updated: 2022/10/26 08:41:39 by rofontai         ###   ########.fr       */
+/*   Updated: 2022/11/02 15:32:18 by rofontai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*FT_MEMCMP permet de copier n de src dans dest.*/
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	size_t	i;

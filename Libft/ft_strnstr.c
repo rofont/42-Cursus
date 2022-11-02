@@ -6,12 +6,14 @@
 /*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 08:44:52 by rofontai          #+#    #+#             */
-/*   Updated: 2022/10/26 10:15:16 by rofontai         ###   ########.fr       */
+/*   Updated: 2022/11/02 15:58:19 by rofontai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*FT_STRNSTR localise la première occurrence de needle dans haystack
+sur len caratères.*/
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;

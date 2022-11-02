@@ -6,7 +6,7 @@
 /*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 16:25:11 by romainfonta       #+#    #+#             */
-/*   Updated: 2022/11/01 11:18:00 by rofontai         ###   ########.fr       */
+/*   Updated: 2022/11/02 13:08:16 by rofontai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include <strings.h>
 #include "libft.h"
 
-/*ft_atoi*/
+/*ft_atoi
 int main(void)
 {
   char  *t = "123456789";
@@ -33,7 +33,7 @@ int main(void)
   printf("%d\n", ft_atoi(t2));
 
   return(0);
-}
+}*/
 
 /*ft_bzero
 int main(void)
@@ -180,3 +180,18 @@ int main(void)
   printf("%s\n", ft_strtrim("", ""));
 	return (0);
 }*/
+
+/*ft_split*/
+int	main(void)
+{
+	char	**txt;
+  char *str = "txt here pls :)";
+  char c = ' ';
+	int	i;
+
+	i = 0;
+	txt = ft_split(str, c);
+	while (txt[i])
+		printf("%s\n", txt[i++]);
+	return (0);
+}

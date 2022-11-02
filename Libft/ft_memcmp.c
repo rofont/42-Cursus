@@ -6,12 +6,14 @@
 /*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 15:18:45 by rofontai          #+#    #+#             */
-/*   Updated: 2022/10/25 15:34:05 by rofontai         ###   ########.fr       */
+/*   Updated: 2022/11/02 15:28:11 by rofontai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*FT_MEMCMP permet de comparer le contenu des deux blocs (s1 et s2).
+n permet de spécifier le nombre d'octets sur lequel comparer les deux blocs.*/
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	size_t			i;

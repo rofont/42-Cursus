@@ -6,12 +6,13 @@
 /*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 09:23:45 by romainfonta       #+#    #+#             */
-/*   Updated: 2022/10/24 13:58:18 by rofontai         ###   ########.fr       */
+/*   Updated: 2022/11/02 13:39:18 by rofontai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*FT_ISALPHA permet de tester si un caractère est alphabétique ou non.*/
 int	ft_isalpha(int c)
 {
 	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))

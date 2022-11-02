@@ -3,15 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: romainfontaine <romainfontaine@student.    +#+  +:+       +#+        */
+/*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 13:00:09 by romainfonta       #+#    #+#             */
-/*   Updated: 2022/10/27 13:35:12 by romainfonta      ###   ########.fr       */
+/*   Updated: 2022/11/02 15:42:51 by rofontai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*FT_STRDUP alloue une nouvelle zone de mémoire via la fonction malloc
+afin d'y copier la chaîne de caractères initiale (s1)*/
 char	*ft_strdup(const char *s1)
 {
 	size_t		len_s;

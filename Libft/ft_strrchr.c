@@ -6,12 +6,13 @@
 /*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 16:18:58 by romainfonta       #+#    #+#             */
-/*   Updated: 2022/10/25 14:35:48 by rofontai         ###   ########.fr       */
+/*   Updated: 2022/11/02 15:59:56 by rofontai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*FT_STRRCHR recherche la dernière occurrence de c dans s.*/
 char	*ft_strrchr(const char *s, int c)
 {
 	int		len_s;

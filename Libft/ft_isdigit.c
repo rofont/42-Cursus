@@ -6,10 +6,11 @@
 /*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 11:04:22 by romainfonta       #+#    #+#             */
-/*   Updated: 2022/10/24 14:02:22 by rofontai         ###   ########.fr       */
+/*   Updated: 2022/11/02 13:43:49 by rofontai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*FT_ISDIGIT permet de tester si un caractère est un chiffre ou non.*/
 int	ft_isdigit(int c)
 {
 	if (c >= 48 && c <= 57)

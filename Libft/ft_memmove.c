@@ -6,12 +6,14 @@
 /*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 12:27:13 by rofontai          #+#    #+#             */
-/*   Updated: 2022/10/25 10:48:05 by rofontai         ###   ########.fr       */
+/*   Updated: 2022/11/02 15:33:52 by rofontai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*FT_MEMMOVE permet de copier n de src dans dest.
+Accepte que les deux zones de mémoire puissent se chevaucher. */
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	size_t	i;

@@ -6,12 +6,15 @@
 /*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 14:00:59 by romainfonta       #+#    #+#             */
-/*   Updated: 2022/10/31 13:01:20 by rofontai         ###   ########.fr       */
+/*   Updated: 2022/11/02 16:04:00 by rofontai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*FT_SUBSTR alloue de la memoire avec malloc et retourne une chaîne de
+caractères issue de la chaîne ’s’. Cette nouvelle chaîne commence à
+l’index ’start’ et a pour taille maximale ’len’*/
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char			*dest;

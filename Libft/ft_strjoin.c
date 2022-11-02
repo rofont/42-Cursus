@@ -6,12 +6,14 @@
 /*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 13:06:02 by rofontai          #+#    #+#             */
-/*   Updated: 2022/10/31 13:35:56 by rofontai         ###   ########.fr       */
+/*   Updated: 2022/11/02 15:45:06 by rofontai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*FT_STRJOIN alloue une nouvelle zone de mémoire via la fonction malloc
+et retourne une nouvelle chaîne, résultat de la concaténation de s1 et s2.*/
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	int		i;

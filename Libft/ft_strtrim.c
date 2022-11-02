@@ -6,12 +6,15 @@
 /*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 13:38:27 by rofontai          #+#    #+#             */
-/*   Updated: 2022/11/01 11:57:36 by rofontai         ###   ########.fr       */
+/*   Updated: 2022/11/02 16:02:24 by rofontai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*FT_STRTRIM alloue de la memoire avec malloc et retourne une copie de
+la chaîne ’s1’, sans les caractères spécifiés dans ’set’ au début et à
+la fin de la chaîne de caractères.*/
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t		i;

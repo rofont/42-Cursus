@@ -6,10 +6,12 @@
 /*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 15:53:09 by romainfonta       #+#    #+#             */
-/*   Updated: 2022/10/25 14:23:45 by rofontai         ###   ########.fr       */
+/*   Updated: 2022/11/02 15:41:16 by rofontai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*FT_STRCHR recherche la première occurrence du caractère passé (c)
+dans la chaîne de caractères spécifique (s).*/
 char	*ft_strchr(const char *s, int c)
 {
 	int		i;

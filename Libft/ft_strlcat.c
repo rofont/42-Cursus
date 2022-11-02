@@ -6,12 +6,13 @@
 /*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 14:36:43 by rofontai          #+#    #+#             */
-/*   Updated: 2022/10/25 10:45:26 by rofontai         ###   ########.fr       */
+/*   Updated: 2022/11/02 15:49:56 by rofontai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*FT_STRLCAT ajoute la chaîne src à la fin de dst. Mais pas plus que dstsize.*/
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
