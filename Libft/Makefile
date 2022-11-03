@@ -6,7 +6,7 @@
 #    By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/24 16:49:17 by rofontai          #+#    #+#              #
-#    Updated: 2022/11/02 14:27:17 by rofontai         ###   ########.fr        #
+#    Updated: 2022/11/03 12:06:29 by rofontai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,6 +42,7 @@ SRC = 	ft_atoi.c		\
 		ft_putendl_fd.c	\
 		ft_strjoin.c	\
 		ft_strtrim.c	\
+		ft_split.c		\
 
 OBJS = $(SRC:.c=.o)
 
