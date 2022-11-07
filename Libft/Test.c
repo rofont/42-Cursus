@@ -6,7 +6,7 @@
 /*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 16:25:11 by romainfonta       #+#    #+#             */
-/*   Updated: 2022/11/03 08:07:35 by rofontai         ###   ########.fr       */
+/*   Updated: 2022/11/07 15:59:48 by rofontai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int main(void)
 {
   char  *t = "123456789";
   char  *t1 = " -12345abc";
-  char  *t2 = " \t -+1245";
+  char  *t2 = " \t --1245";
 
   printf("%d\n", atoi(t));
   printf("%d\n", ft_atoi(t));
@@ -195,5 +195,6 @@ int main(void)
         ft_putendl_fd(tab[i], 1);
         i++;
     }
+	free((char **)tab);
     return (0);
 }
