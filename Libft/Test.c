@@ -6,7 +6,7 @@
 /*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 16:25:11 by romainfonta       #+#    #+#             */
-/*   Updated: 2022/11/07 15:59:48 by rofontai         ###   ########.fr       */
+/*   Updated: 2022/11/08 10:20:59 by rofontai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -187,12 +187,12 @@ int main(void)
     char **tab;
     unsigned int    i;
     i = 0;
-    tab = ft_split("lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse", ' ');
+    tab = ft_split("   lorem ipsum dolor sit amet,    consectetur adipiscing elit. Sed non risus. Suspendisse     ", ' ');
     if (!tab[0])
-        ft_putendl_fd("ok\n", 1);
+        printf("ok\n");
     while (tab[i] != NULL)
     {
-        ft_putendl_fd(tab[i], 1);
+        printf("%s\n", tab[i]);
         i++;
     }
 	free((char **)tab);

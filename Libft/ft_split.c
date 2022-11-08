@@ -6,76 +6,79 @@
 /*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 12:02:11 by rofontai          #+#    #+#             */
-/*   Updated: 2022/11/07 16:49:12 by rofontai         ###   ########.fr       */
+/*   Updated: 2022/11/08 11:18:42 by rofontai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	count_word(char const *s, char c)
+static char	**ft_free(char **tab)
 {
-	size_t	i;
-	size_t	w;
-
-	i = 0;
-	w = 0;
-	while (s[i])
-	{
-		if (s[i] != c)
-		{
-			w++;
-			while (s[i] != c && s[i])
-				i++;
-		}
-		else
-			i++;
-	}
-	return (w);
-}
-
-static char	*word_push(char const *s, size_t start, size_t len)
-{
-	char *dest;
 	size_t	i;
 
 	i = 0;
-	dest = malloc(sizeof(char *) * len + 1);
-	if (!dest)
-		return (0);
-	while (i < len && s[start + i])
+	while (tab[i])
 	{
-		dest[i] = s[start + i];
+		free(tab[i]);
 		i++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	free(tab);
+	return (0);
+}
+
+static size_t	count_word(char const *str, char c)
+{
+	size_t	i;
+	size_t	nbw;
+
+	i = 0;
+	nbw = 0;
+	while (str[i] != '\0')
+	{
+		while (str[i] && (str[i] == c))
+			i++;
+		while (str[i] && (str[i] != c))
+			i++;
+		if (str[i - 1] != c)
+			nbw++;
+	}
+	return (nbw);
+}
+
+static char	**splitcpy(char **split, char const *s, char c)
+{
+	size_t	word;
+	size_t	i;
+	size_t	start;
+
+	i = 0;
+	word = 0;
+	while (s[i] && word < count_word(s, c))
+	{
+		while (s[i] == c && s[i])
+			i++;
+		start = i;
+		while (s[i] != c && s[i])
+				i++;
+		split[word] = ft_substr(s, start, i - start);
+		if (!split[word])
+			return (ft_free(split));
+		word++;
+	}
+	split[word] = 0;
+	return (split);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	size_t	w;
-	size_t	i;
-	size_t	start;
 	char	**split;
+	size_t	nbw;
 
 	if (!s)
 		return (0);
-	split = malloc(sizeof(char *) * (count_word(s, c) + 1));
+	nbw = count_word(s, c);
+	split = malloc(sizeof(char *) * (nbw + 1));
 	if (!split)
 		return (0);
-	w = 0;
-	i = -1;
-	start = -1;
-	while (i++ <= ft_strlen(s))
-	{
-		if (s[i] != c && start < 0)
-			start = i;
-		else if ((s[i] == c || i == ft_strlen(s)) && start >= 0)
-		{
-			split[w++] = word_push(s, start, i);
-			start = -1;
-		}
-	}
-	split[w] = 0;
-	return (split);
+	return (splitcpy(split, s, c));
 }
