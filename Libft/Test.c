@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
+/*   By: romainfontaine <romainfontaine@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 16:25:11 by romainfonta       #+#    #+#             */
-/*   Updated: 2022/11/08 10:20:59 by rofontai         ###   ########.fr       */
+/*   Updated: 2022/11/08 16:53:52 by romainfonta      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -181,7 +181,7 @@ int main(void)
 	return (0);
 }*/
 
-/*ft_split*/
+/*ft_split
 int main(void)
 {
     char **tab;
@@ -197,4 +197,4 @@ int main(void)
     }
 	free((char **)tab);
     return (0);
-}
+}*/
