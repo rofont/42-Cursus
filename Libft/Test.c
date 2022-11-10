@@ -6,7 +6,7 @@
 /*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 16:25:11 by romainfonta       #+#    #+#             */
-/*   Updated: 2022/11/09 12:53:49 by rofontai         ###   ########.fr       */
+/*   Updated: 2022/11/10 10:16:09 by rofontai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -199,10 +199,10 @@ int main(void)
     return (0);
 }*/
 
-/*ft_itoa*/
+/*ft_itoa
 int main(void)
 {
   int n = -2147483648;
   printf("%s\n", ft_itoa(n));
   return (0);
-}
+}*/
