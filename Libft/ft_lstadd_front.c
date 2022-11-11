@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: romainfontaine <romainfontaine@student.    +#+  +:+       +#+        */
+/*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 16:40:50 by romainfonta       #+#    #+#             */
-/*   Updated: 2022/11/10 20:54:58 by romainfonta      ###   ########.fr       */
+/*   Updated: 2022/11/11 13:24:02 by rofontai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

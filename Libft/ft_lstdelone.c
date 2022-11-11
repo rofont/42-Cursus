@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/10 21:00:23 by romainfonta       #+#    #+#             */
-/*   Updated: 2022/11/11 14:07:58 by rofontai         ###   ########.fr       */
+/*   Created: 2022/11/11 14:51:09 by rofontai          #+#    #+#             */
+/*   Updated: 2022/11/11 15:10:07 by rofontai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*FT_LSTLAST renvoie le dernier élément de la liste.*/
-t_list	*ft_lstlast(t_list *lst)
+/*FT_LSTDELONE libère la mémoire de l’élément passé en argument en utilisant
+la fonction ’del’ puis avec free(3).
+La mémoire de ’next’ ne doit pas être free.*/
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
 	if (!lst)
-		return (NULL);
-	while (lst->next != NULL)
-		lst = lst->next;
-	return (lst);
+		return ;
+	if (del)
+		del(lst->content);
+	free(lst);
 }
