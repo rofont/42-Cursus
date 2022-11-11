@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
+/*   By: romainfontaine <romainfontaine@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 16:25:11 by romainfonta       #+#    #+#             */
-/*   Updated: 2022/11/10 10:16:09 by rofontai         ###   ########.fr       */
+/*   Updated: 2022/11/10 21:23:39 by romainfonta      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -204,5 +204,18 @@ int main(void)
 {
   int n = -2147483648;
   printf("%s\n", ft_itoa(n));
+  return (0);
+}*/
+
+/*test structure
+int main(void)
+{
+  t_list *lst = NULL;
+  while (lst)
+  {
+
+    printf("%d\n", lst->content);
+    lst = lst->next;
+  }
   return (0);
 }*/

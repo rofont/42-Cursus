@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: romainfontaine <romainfontaine@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/10 11:29:39 by rofontai          #+#    #+#             */
-/*   Updated: 2022/11/10 20:54:14 by romainfonta      ###   ########.fr       */
+/*   Created: 2022/11/10 20:44:42 by romainfonta       #+#    #+#             */
+/*   Updated: 2022/11/10 21:22:56 by romainfonta      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*FT_LSTNEW alloue de la memoire avec malloc et renvoie un nouvel élément.
-La variable membre (content) est initialisée à l’aide de la valeur du paramètre
-(content). La variable ’next’ est initialisée à NULL.*/
-t_list	*ft_lstnew(void *content)
+/*FT_LSTSIZE compte le nombre d’éléments de la liste.*/
+int	ft_lstsize(t_list *lst)
 {
-	t_list	*i;
+	int	len;
 
-	i = malloc(sizeof(t_list));
-	if (!i)
-		return (NULL);
-	i->content = content;
-	i->next = NULL;
-	return (i);
+	len = 0;
+	if (!lst)
+		return (0);
+	while (lst)
+	{
+		lst = lst->next;
+		len++;
+	}
+	return (len);
 }
