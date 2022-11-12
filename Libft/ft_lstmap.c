@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
+/*   By: romainfontaine <romainfontaine@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 16:05:36 by rofontai          #+#    #+#             */
-/*   Updated: 2022/11/11 16:53:28 by rofontai         ###   ########.fr       */
+/*   Updated: 2022/11/11 22:45:00 by romainfonta      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,22 @@ successives de ’f’. La fonction ’del’ est là pour détruire
 le contenu d’un élément si nécessaire.*/
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
+	t_list	*new;
 	t_list	*temp;
 
-	if (!lst)
-		return ;
+	new = NULL;
+	if (!lst || !f || !del)
+		return (NULL);
 	while (lst)
 	{
-		if (del)
-			del(lst->content);
-		f(lst->content);
+		temp = ft_lstnew((*f)(lst->content));
+		if (!temp)
+		{
+			ft_lstclear(&new, del);
+			return (new);
+		}
+		ft_lstadd_back(&new, temp);
 		lst = lst->next;
 	}
+	return (new);
 }
