@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
+/*   By: romainfontaine <romainfontaine@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 18:12:45 by romainfonta       #+#    #+#             */
-/*   Updated: 2022/11/09 14:34:13 by rofontai         ###   ########.fr       */
+/*   Updated: 2022/11/13 20:37:31 by romainfonta      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

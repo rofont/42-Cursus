@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
+/*   By: romainfontaine <romainfontaine@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 16:26:10 by romainfonta       #+#    #+#             */
-/*   Updated: 2022/11/02 15:39:29 by rofontai         ###   ########.fr       */
+/*   Updated: 2022/11/13 20:47:14 by romainfonta      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_memset(void *b, int c, size_t len)
 	size_t		i;
 	char		*temp;
 
+	if (!b)
+		return (0);
 	temp = b;
 	i = 0;
 	while (i < len)

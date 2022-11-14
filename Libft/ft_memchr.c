@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
+/*   By: romainfontaine <romainfontaine@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 16:19:36 by rofontai          #+#    #+#             */
-/*   Updated: 2022/11/02 15:25:57 by rofontai         ###   ########.fr       */
+/*   Updated: 2022/11/13 20:38:35 by romainfonta      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	size_t		i;
 	char		*temp;
 
+	if (!s)
+		return (0);
 	temp = (char *)s;
 	i = 0;
 	while (i < n)

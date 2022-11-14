@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
+/*   By: romainfontaine <romainfontaine@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 13:38:27 by rofontai          #+#    #+#             */
-/*   Updated: 2022/11/02 16:02:24 by rofontai         ###   ########.fr       */
+/*   Updated: 2022/11/13 20:54:37 by romainfonta      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

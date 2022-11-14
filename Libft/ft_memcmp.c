@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
+/*   By: romainfontaine <romainfontaine@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 15:18:45 by rofontai          #+#    #+#             */
-/*   Updated: 2022/11/02 15:28:11 by rofontai         ###   ########.fr       */
+/*   Updated: 2022/11/13 20:41:47 by romainfonta      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
+/*   By: romainfontaine <romainfontaine@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 08:10:37 by rofontai          #+#    #+#             */
-/*   Updated: 2022/11/10 08:18:16 by rofontai         ###   ########.fr       */
+/*   Updated: 2022/11/13 20:51:55 by romainfonta      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
