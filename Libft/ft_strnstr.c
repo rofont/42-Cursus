@@ -6,7 +6,7 @@
 /*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 08:44:52 by rofontai          #+#    #+#             */
-/*   Updated: 2022/11/02 15:58:19 by rofontai         ###   ########.fr       */
+/*   Updated: 2022/11/14 09:14:23 by rofontai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t	i;
 	size_t	j;
 
+	if (!haystack || !needle)
+		return (0);
 	i = 0;
 	if (needle[0] == '\0')
 		return ((char *)haystack);

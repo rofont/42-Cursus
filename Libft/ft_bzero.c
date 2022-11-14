@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: romainfontaine <romainfontaine@student.    +#+  +:+       +#+        */
+/*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 16:57:32 by romainfonta       #+#    #+#             */
-/*   Updated: 2022/11/13 20:34:31 by romainfonta      ###   ########.fr       */
+/*   Updated: 2022/11/14 09:05:05 by rofontai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ void	ft_bzero(void *s, size_t n)
 	size_t	i;
 	char	*temp;
 
-	i = 0;
 	if (!s)
 		return ;
+	i = 0;
 	temp = (char *)s;
 	while (i < n)
 	{

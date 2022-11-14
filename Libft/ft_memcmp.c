@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: romainfontaine <romainfontaine@student.    +#+  +:+       +#+        */
+/*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 15:18:45 by rofontai          #+#    #+#             */
-/*   Updated: 2022/11/13 20:41:47 by romainfonta      ###   ########.fr       */
+/*   Updated: 2022/11/14 09:06:51 by rofontai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	unsigned char	*temp1;
 	unsigned char	*temp2;
 
+	if (!s1 || !s2)
+		return (0);
 	temp1 = (unsigned char *)s1;
 	temp2 = (unsigned char *)s2;
 	i = 0;

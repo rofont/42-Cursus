@@ -6,7 +6,7 @@
 /*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 09:03:28 by romainfonta       #+#    #+#             */
-/*   Updated: 2022/11/02 15:52:55 by rofontai         ###   ########.fr       */
+/*   Updated: 2022/11/14 09:00:28 by rofontai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	size_t	i;
 	size_t	len_src;
 
+	if (!dst || !src)
+		return (0);
 	len_src = ft_strlen(src);
 	i = 0;
 	if (dstsize <= 0)

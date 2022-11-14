@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: romainfontaine <romainfontaine@student.    +#+  +:+       +#+        */
+/*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 12:02:11 by rofontai          #+#    #+#             */
-/*   Updated: 2022/11/08 18:12:17 by romainfonta      ###   ########.fr       */
+/*   Updated: 2022/11/14 07:57:47 by rofontai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	**ft_free(char **tab)
+static char	**free_tab(char **tab)
 {
 	size_t	i;
 
@@ -35,9 +35,9 @@ static size_t	count_word(char const *str, char c)
 	nbw = 0;
 	while (str[i] != '\0')
 	{
-		while (str[i] && (str[i] == c))
+		while ((str[i] == c) && str[i])
 			i++;
-		while (str[i] && (str[i] != c))
+		while ((str[i] != c) && str[i])
 			i++;
 		if (str[i - 1] != c)
 			nbw++;
@@ -62,7 +62,7 @@ static char	**splitcpy(char **split, char const *s, char c)
 				i++;
 		split[word] = ft_substr(s, start, i - start);
 		if (!split[word])
-			return (ft_free(split));
+			return (free_tab(split));
 		word++;
 	}
 	split[word] = 0;

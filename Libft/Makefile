@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: romainfontaine <romainfontaine@student.    +#+  +:+       +#+         #
+#    By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/24 16:49:17 by rofontai          #+#    #+#              #
-#    Updated: 2022/11/13 21:02:04 by romainfonta      ###   ########.fr        #
+#    Updated: 2022/11/14 08:36:11 by rofontai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
