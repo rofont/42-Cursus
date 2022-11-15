@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_arg_value.c                                     :+:      :+:    :+:   */
+/*   ft_printstr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/15 12:52:48 by rofontai          #+#    #+#             */
-/*   Updated: 2022/11/15 14:50:00 by rofontai         ###   ########.fr       */
+/*   Created: 2022/11/15 14:33:05 by rofontai          #+#    #+#             */
+/*   Updated: 2022/11/15 14:35:29 by rofontai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int	ft_arg_value(va_list arg, char c)
+int	ft_printstr(char const *str)
 {
-	int	temp;
+	int	i;
 
-	temp = 0;
-	if (c == '%')
-		temp  += ft_printchar(c);
-	else if (c == 's')
-		temp += ft_printstr(va_arg(arg, char *));
-	return (temp);
+	i = 0;
+	while (str[i])
+	{
+		ft_printchar(str[i]);
+		i++;
+	}
+	return (i);
 }
