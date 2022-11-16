@@ -5,9 +5,9 @@
 int main()
 {
 	// int a;
-	printf("La valeur est %%");
+	printf("%i", printf("La valeur est : %i ", -123456789));
 	printf("\n");
-	ft_printf("La valeur est %%");
+	printf("%i", ft_printf("La valeur est : %i ", -123456789));
 	printf("\n");
 	return 0;
 }
