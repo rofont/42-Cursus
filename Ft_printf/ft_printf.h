@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 12:38:34 by rofontai          #+#    #+#             */
-/*   Updated: 2022/11/16 12:12:23 by rofontai         ###   ########.fr       */
+/*   Updated: 2022/11/18 14:42:42 by rofontai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFTPRINTF_H
-# define LIBFTPRINTF_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-#include <unistd.h>
-#include <stdarg.h>
+# include <unistd.h>
+# include <stdarg.h>
+
+# define TAB_BASE_HEX_U "0123456789ABCDEF"
+# define TAB_BASE_HEX_L "0123456789abcdef"
+# define TAB_BASE_DEC "0123456789"
 
 int	ft_printf(const char *str, ...);
 int	ft_printchar(char c);
 int	ft_arg_value(va_list arg, char c);
 int	ft_printstr(char const *str);
-int	ft_printint(int n);
-int	ft_print_unsigned (unsigned int n);
-
+int	ft_printbase(long n, char *tab_base, char c);
 
 #endif

@@ -6,11 +6,11 @@
 /*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 12:21:24 by rofontai          #+#    #+#             */
-/*   Updated: 2022/11/15 14:55:26 by rofontai         ###   ########.fr       */
+/*   Updated: 2022/11/18 14:42:27 by rofontai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_printf(const char *str, ...)
 {
