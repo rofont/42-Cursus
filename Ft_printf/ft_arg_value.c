@@ -6,7 +6,7 @@
 /*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 12:52:48 by rofontai          #+#    #+#             */
-/*   Updated: 2022/11/18 16:48:18 by rofontai         ###   ########.fr       */
+/*   Updated: 2022/11/22 10:19:57 by rofontai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,6 @@ int	ft_arg_value(va_list arg, char c)
 	else if (c == 'X')
 		temp += ft_printbase(va_arg(arg, unsigned int), TAB_BASE_HEX_U, c);
 	else if (c == 'p')
-		temp += ft_printptr();
+		temp += ft_printptr(va_arg(arg, void *));
 	return (temp);
 }

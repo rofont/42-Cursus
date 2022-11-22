@@ -6,7 +6,7 @@
 /*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 12:38:34 by rofontai          #+#    #+#             */
-/*   Updated: 2022/11/18 14:42:42 by rofontai         ###   ########.fr       */
+/*   Updated: 2022/11/22 08:32:19 by rofontai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,6 @@ int	ft_printchar(char c);
 int	ft_arg_value(va_list arg, char c);
 int	ft_printstr(char const *str);
 int	ft_printbase(long n, char *tab_base, char c);
+int	ft_printptr(void *ptr);
 
 #endif
