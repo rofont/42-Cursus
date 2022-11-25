@@ -6,26 +6,53 @@
 /*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 08:19:46 by rofontai          #+#    #+#             */
-/*   Updated: 2022/11/23 11:50:58 by rofontai         ###   ########.fr       */
+/*   Updated: 2022/11/25 11:05:00 by rofontai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-char	*get_next_line(int fd)
+int	strlen(char *str)
 {
-	char	*buff;
-	int 	temp;
+	int	len;
 
+	len = 0;
+	while (str[len])
+		len++;
+	return (len);
+}
 
-	if (!fd || BUFFER_SIZE < 1)
-		return (0);
-	buff = malloc(BUFFER_SIZE + 1);
-	if (!buff)
-		return (0);
-	temp = read(fd, buff, BUFFER_SIZE);
-	while (temp)
+/*peut etre mixer avec strlen*/
+int	find_new_line(char *str, char c)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
 	{
-		buff[temp] = '\0';
+		if (str[i] == c)
+			return (i + 1);
+		i++;
 	}
-	return (buff);
+	return (-1);
+}
+
+char	*extraction_line(char *str, int len)
+{
+	char			*dest;
+	int				i;
+	unsigned int	len_s;
+
+	i = 0;
+	len_s = strlen(str);
+	dest = malloc(sizeof(char) * len_s + 1);
+	if (!dest)
+		return (0);
+	while (i < len && str[i])
+	{
+		dest[i] = str[start + i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
+}
