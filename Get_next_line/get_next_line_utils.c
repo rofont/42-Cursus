@@ -6,7 +6,7 @@
 /*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 08:19:46 by rofontai          #+#    #+#             */
-/*   Updated: 2022/11/25 11:05:00 by rofontai         ###   ########.fr       */
+/*   Updated: 2022/11/28 16:54:50 by rofontai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ char	*extraction_line(char *str, int len)
 		return (0);
 	while (i < len && str[i])
 	{
-		dest[i] = str[start + i];
+		dest[i] = str[i];
 		i++;
 	}
 	dest[i] = '\0';

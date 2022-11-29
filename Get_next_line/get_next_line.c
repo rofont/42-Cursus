@@ -6,7 +6,7 @@
 /*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 08:19:40 by rofontai          #+#    #+#             */
-/*   Updated: 2022/11/25 11:20:55 by rofontai         ###   ########.fr       */
+/*   Updated: 2022/11/28 14:01:12 by rofontai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,27 +22,18 @@ est ce qu'il y a un \n ?
 */
 char	*get_next_line(int fd)
 {
-	char *buff;
-	static char *temp;
-	char *line;
-	int i;
-	int j;
+	char	*buff;
 
-
-	i = 0;
 	if (!fd || BUFFER_SIZE <= 0 || (read(fd, buff, 0) < 0))
 		return (0);
-	while (read(fd, buff, BUFFER_SIZE))
-	{
-		while (buff[i])
-			temp[j++] = buff[i++];
-		if (find_new_line(temp, '\n') == -1)
-		{
-			line = extraction_line(temp, (find_new_line(temp, '\n')));
+	/*
+	1-faire appelle à Read
+	2-copie le buff de read dans un temporaire
+	3-analyser le temporaire si \n
+		Si \n = alors recopier jusqu'au \n dans la str à renvoyer
+			effacer le temporaire jusqu'au \n compris
+		Si pas de \n alors refaire appelle à read.
+			copie le buff à la suite dans temporaire
+	*/
 
-			free(buff);
-		}
-	}
-
-	return (line);
 }
