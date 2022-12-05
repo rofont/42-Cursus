@@ -6,21 +6,11 @@
 /*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 09:35:20 by rofontai          #+#    #+#             */
-/*   Updated: 2022/12/02 14:47:41 by rofontai         ###   ########.fr       */
+/*   Updated: 2022/12/05 15:55:17 by rofontai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-
-int	lenstr(char *str)
-{
-	int i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
 
 void	ft_putchar(char c)
 {
@@ -75,24 +65,6 @@ int	search_new_line(char *str, char c)
 	return (0);
 }
 
-char *copy_in_stat(char *str, int len)
-{
-	char *dest;
-	int i;
-
-	i = 0;
-	dest = malloc(sizeof(char) * len + 1);
-	if (!dest)
-		return (0);
-	while (str[i] && i < len)
-	{
-		dest[i] = str[i];
-		i++;
-	}
-	dest[i] = '\0';
-	return (dest);
-}
-
 char *join(char *s1, char *s2)
 {
 	int		i;
@@ -119,18 +91,41 @@ char *join(char *s1, char *s2)
 	return (dest);
 }
 
-void	zero(void *s, size_t n)
+int	lenstr(char *str)
 {
-	size_t	i;
-	char	*temp;
+	int i;
 
-	if (!s)
-		return ;
 	i = 0;
-	temp = (char *)s;
-	while (i < n)
+	while (str[i])
+		i++;
+	return (i);
+}
+
+char	*strsub(char *s, unsigned int start, size_t len)
+{
+	char			*dest;
+	size_t			i;
+	unsigned int	len_s;
+
+	i = 0;
+	len_s = lenstr(s);
+	if (start < len_s)
+		while (i < len && s[start + i])
+			i++;
+	dest = (char *)malloc(i + 1);
+	if (!dest)
+		return (0);
+	if (start >= len_s)
 	{
-		temp[i] = '\0';
+		dest[0] = '\0';
+		return (dest);
+	}
+	i = 0;
+	while (i < len && s[start + i])
+	{
+		dest[i] = s[start + i];
 		i++;
 	}
+	dest[i] = '\0';
+	return (dest);
 }
