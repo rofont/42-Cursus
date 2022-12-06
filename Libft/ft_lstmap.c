@@ -6,7 +6,7 @@
 /*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 16:05:36 by rofontai          #+#    #+#             */
-/*   Updated: 2022/11/14 07:45:30 by rofontai         ###   ########.fr       */
+/*   Updated: 2022/12/06 10:34:53 by rofontai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	while (lst)
 	{
 		cont = ((*f)(lst->content));
-		temp = ft_lstnew(cont);
+		temp = ft_lstnew((cont));
 		if (!temp)
 		{
 			ft_lstclear(&new, del);
