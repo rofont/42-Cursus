@@ -6,7 +6,7 @@
 /*   By: romainfontaine <romainfontaine@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 12:54:10 by rofontai          #+#    #+#             */
-/*   Updated: 2022/11/11 22:12:41 by romainfonta      ###   ########.fr       */
+/*   Updated: 2022/12/07 13:40:08 by romainfonta      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
-size_t	ft_strlen(const char *s);
+size_t	lenstr(const char *s);
 
 /*Fonction int */
 int		ft_atoi(const char *str);
