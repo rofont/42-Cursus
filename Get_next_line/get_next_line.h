@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
+/*   By: romainfontaine <romainfontaine@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 09:34:19 by rofontai          #+#    #+#             */
-/*   Updated: 2022/12/06 10:28:57 by rofontai         ###   ########.fr       */
+/*   Updated: 2022/12/07 16:13:09 by romainfonta      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,15 @@
 # include <fcntl.h>		/*à Supprimer*/
 
 # ifndef BUFFER_SIZE
-# 	define BUFFER_SIZE 10
+#  define BUFFER_SIZE 10
 # endif
 
 char	*get_next_line(int fd);
+size_t	lenstr(const char *s);
+char	*read_copy(int fd, char *str);
+char	*join(char *s1, char *s2);
+int		search_new_line(char *str, char c);
+char	*extract_line(char *str);
+char	*clear_temp(char *str);
 
 #endif
