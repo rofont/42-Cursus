@@ -6,115 +6,128 @@
 /*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 09:35:20 by rofontai          #+#    #+#             */
-/*   Updated: 2022/12/08 11:55:03 by rofontai         ###   ########.fr       */
+/*   Updated: 2022/12/13 16:02:07 by rofontai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-char	*read_copy(int fd, char *str)
+char *ft_read(int fd, char *save)
 {
 	char	*buff;
 	int		byte;
 
-	buff = malloc(BUFFER_SIZE + 1);
+	if (!save)
+		save = calloc_ptr(sizeof(char), 1);
+	buff = calloc_ptr(sizeof(char), BUFFER_SIZE + 1);
 	if (!buff)
 		return (0);
 	byte = 1;
-	while (search_new_line(str, '\n') == 0 && byte != 0)
+	while(search_nline(save, '\n') == 0 && byte != 0)
 	{
 		byte = read(fd, buff, BUFFER_SIZE);
 		if (byte == -1)
 		{
 			free(buff);
-			free(str);
+			free(save);
 			return (0);
 		}
-		// buff[byte] = '\0';
-		str = join(str, buff);
+			save = join(save, buff);
+			ft_bzero(buff, BUFFER_SIZE + 1);
 	}
 	free(buff);
-	return (str);
+	return (save);
 }
 
-char	*join(char *s1, char *s2)
+void *calloc_ptr(size_t count, size_t size)
 {
-	int		i;
-	int		j;
-	char	*dest;
+		void	*ptr;
+
+	ptr = malloc(count * size);
+	if (!ptr)
+		return (0);
+	ft_bzero(ptr, (count * size));
+	return (ptr);
+}
+
+char *join(char *save, char *buff)
+{
+	int i;
+	int j;
+	char *dest;
 
 	i = 0;
 	j = 0;
-		if (!s1)
-	{
-		s1 = malloc(sizeof(char) * 1);
-		if (!s1)
-			return (0);
-	}
-	dest = malloc(sizeof(char) * (lenstr(s1) + lenstr(s2)));
+	dest = calloc_ptr(sizeof(char), (lenstr(save) + lenstr(buff) + 1));
 	if (!dest)
 		return (0);
-	while (s1[i])
+	while (save[i])
 	{
-		dest[i] = s1[i];
+		dest[i] = save[i];
 		i++;
 	}
-	while (s2[j])
+	while (buff[j])
 	{
-		dest[i] = s2[j];
+		dest[i] = buff[j];
 		i++;
 		j++;
 	}
-	free(s1);
-	dest[i] = '\0';
+	free(save);
 	return (dest);
 }
 
-int	search_new_line(char *str, char c)
+int lenstr(char *str)
 {
 	int	i;
 
-	if (!str)
-		return (0);
 	i = 0;
 	while (str[i])
+		i++;
+	return (i);
+}
+
+int search_nline(char *save, char c)
+{
+	int i;
+
+	i = 0;
+	while (save[i])
 	{
-		if (str[i] == c)
+		if (save[i] == c)
 			return (i);
 		i++;
 	}
 	return (0);
 }
 
-char	*extract_line(char *str)
+char *extract_line(char *save, char c)
 {
-	int		i;
-	int		len;
-	char	*dest;
+	int i;
+	char *dest;
 
 	i = 0;
-	if (!str[i])
+	if (!save)
 		return (0);
-	len = search_new_line(str, '\n');
-	dest = malloc(sizeof(char) * len + 2);
+	while ( save[i] && save[i] != c)
+		i++;
+	dest = calloc_ptr(sizeof(char), i + 2);
 	if (!dest)
-		return (0);
-	while (str[i] && str[i] != '\n')
+		return(0);
+	i = 0;
+	while (save[i] && save[i] != c)
 	{
-		dest[i] = str[i];
+		dest[i] = save[i];
 		i++;
 	}
-	if (str[i] == '\n')
+	if (save[i] == c)
 	{
-		dest[i] = str[i];
+		dest[i] = save[i];
 		i++;
 	}
-	dest[i] = '\0';
-	free(str);
 	return (dest);
 }
 
-char	*clear_temp(char *str)
+char *crop_save(char *save, char c)
 {
 	int		i;
 	int		start;
@@ -122,18 +135,38 @@ char	*clear_temp(char *str)
 	char	*dest;
 
 	i = 0;
-	if (!str || search_new_line(str, '\n') == 0)
+	start = 0;
+	if (!save)
 		return (0);
-	start = (search_new_line(str, '\n') + 1);
-	len = (lenstr(str) - start);
-	dest = malloc(sizeof(char) * len + 1);
+	while (save[start] && save[start] != c)
+		start++;
+	if (save[start] == c)
+		start++;
+	len = (lenstr(save) - start);
+	dest = calloc_ptr(sizeof(char), len + 1);
 	if (!dest)
 		return (0);
-	while (i <= len && str[start + i])
+	while (i <= len && save[start + i])
 	{
-		dest[i] = str[start + i];
+		dest[i] = save[start + i];
 		i++;
 	}
-	dest[i] = '\0';
+	free(save);
 	return (dest);
+}
+
+void	ft_bzero(void *s, size_t n)
+{
+	size_t	i;
+	char	*temp;
+
+	if (!s)
+		return ;
+	i = 0;
+	temp = (char *)s;
+	while (i < n)
+	{
+		temp[i] = '\0';
+		i++;
+	}
 }

@@ -6,7 +6,7 @@
 /*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 09:34:19 by rofontai          #+#    #+#             */
-/*   Updated: 2022/12/08 11:11:53 by rofontai         ###   ########.fr       */
+/*   Updated: 2022/12/13 15:48:14 by rofontai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,13 @@
 # endif
 
 char	*get_next_line(int fd);
-size_t	lenstr(char *s);
-char	*read_copy(int fd, char *str);
-char	*join(char *s1, char *s2);
-int		search_new_line(char *str, char c);
-char	*extract_line(char *str);
-char	*clear_temp(char *str);
+void	*calloc_ptr(size_t count, size_t size);
+int 	lenstr(char *str);
+char	*ft_read(int fd, char *save);
+char 	*join(char *save, char *buff);
+int 	search_nline(char *save, char c);
+char 	*extract_line(char *save, char c);
+char 	*crop_save(char *save, char c);
+void	ft_bzero(void *s, size_t n);
 
 #endif
