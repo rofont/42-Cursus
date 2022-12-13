@@ -6,7 +6,7 @@
 /*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 09:34:19 by rofontai          #+#    #+#             */
-/*   Updated: 2022/12/13 15:48:14 by rofontai         ###   ########.fr       */
+/*   Updated: 2022/12/13 16:48:39 by rofontai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdlib.h>
 # include <stdio.h>		/*à Supprimer*/
 # include <fcntl.h>		/*à Supprimer*/
+#include <limits.h>
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 10

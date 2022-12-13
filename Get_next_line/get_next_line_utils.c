@@ -6,7 +6,7 @@
 /*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 09:35:20 by rofontai          #+#    #+#             */
-/*   Updated: 2022/12/13 16:02:07 by rofontai         ###   ########.fr       */
+/*   Updated: 2022/12/13 17:02:38 by rofontai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,9 @@ char *ft_read(int fd, char *save)
 			free(save);
 			return (0);
 		}
+		if (byte > 0)
 			save = join(save, buff);
-			ft_bzero(buff, BUFFER_SIZE + 1);
+		ft_bzero(buff, BUFFER_SIZE + 1);
 	}
 	free(buff);
 	return (save);
@@ -108,9 +109,10 @@ char *extract_line(char *save, char c)
 	i = 0;
 	if (!save)
 		return (0);
-	while ( save[i] && save[i] != c)
-		i++;
-	dest = calloc_ptr(sizeof(char), i + 2);
+	while ( save[i])
+		if (save[i++] == c)
+			break;
+	dest = calloc_ptr(sizeof(char), i + 1);
 	if (!dest)
 		return(0);
 	i = 0;

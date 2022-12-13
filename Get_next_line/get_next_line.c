@@ -6,7 +6,7 @@
 /*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 09:34:39 by rofontai          #+#    #+#             */
-/*   Updated: 2022/12/13 16:10:24 by rofontai         ###   ########.fr       */
+/*   Updated: 2022/12/13 17:04:12 by rofontai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,29 +18,16 @@ char	*get_next_line(int fd)
 	char		*line;
 
 
-	if (fd < 0 || BUFFER_SIZE <= 0)
+	if (fd < 0 || BUFFER_SIZE <= 0 || fd > OPEN_MAX)
 		return (0);
 	save = ft_read(fd, save);
-	if (!save)
-	{
-		free(save);
-		return (0);
-	}
-	// printf("%s\n", save);
 	line = extract_line(save, '\n');
-	if (!line)
+	if (line && *line == 0)
 	{
 		free(line);
 		return(0);
 	}
-	// printf("%s\n", line);
 	save = crop_save(save, '\n');
-	if(!save)
-	{
-		free(save);
-		return (0);
-	}
-	// printf("%s\n", save);
 	return (line);
 }
 
