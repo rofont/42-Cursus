@@ -6,7 +6,7 @@
 /*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 09:35:20 by rofontai          #+#    #+#             */
-/*   Updated: 2022/12/15 09:20:06 by rofontai         ###   ########.fr       */
+/*   Updated: 2022/12/15 11:55:16 by rofontai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_read(int fd, char *save)
 	if (!buff)
 		return (0);
 	byte = 1;
-	while ((search_nline(buff, '\n') == 0 || !save) && byte != 0)
+	while ((search_nline(save, '\n') == 0 || !save) && byte != 0)
 	{
 		byte = read(fd, buff, BUFFER_SIZE);
 		if (byte == -1)
@@ -31,23 +31,10 @@ char	*ft_read(int fd, char *save)
 			return (0);
 		}
 		save = join(save, buff);
-		if (!save)
-			return (free_ft(save));
 		ft_bzero(buff, BUFFER_SIZE);
 	}
 	free(buff);
 	return (save);
-}
-
-void	*calloc_ptr(size_t count, size_t size)
-{
-	void	*ptr;
-
-	ptr = malloc(count * size);
-	if (!ptr)
-		return (0);
-	ft_bzero(ptr, (count * size));
-	return (ptr);
 }
 
 char	*join(char *save, char *buff)
@@ -78,21 +65,13 @@ char	*join(char *save, char *buff)
 	return (dest);
 }
 
-int	lenstr(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-
 int	search_nline(char *save, char c)
 {
 	int	i;
 
 	i = 0;
+	if (!save)
+		return (0);
 	while (save[i])
 	{
 		if (save[i] == c)
@@ -108,7 +87,7 @@ char	*extract_line(char *save, char c)
 	char	*dest;
 
 	i = 0;
-	if (!save)
+	if (!save[0])
 		return (0);
 	while (save[i])
 		if (save[i++] == c)
@@ -155,27 +134,4 @@ char	*crop_save(char *save, char c)
 	free(save);
 	save = NULL;
 	return (dest);
-}
-
-void	ft_bzero(void *s, size_t n)
-{
-	size_t	i;
-	char	*temp;
-
-	if (!s)
-		return ;
-	i = 0;
-	temp = (char *)s;
-	while (i < n)
-	{
-		temp[i] = '\0';
-		i++;
-	}
-}
-
-void	*free_ft(char *str)
-{
-	if (str)
-		free(str);
-	return (0);
 }
