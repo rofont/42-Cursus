@@ -6,7 +6,7 @@
 /*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 09:34:19 by rofontai          #+#    #+#             */
-/*   Updated: 2022/12/13 16:48:39 by rofontai         ###   ########.fr       */
+/*   Updated: 2022/12/15 09:00:06 by rofontai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,6 @@ int 	search_nline(char *save, char c);
 char 	*extract_line(char *save, char c);
 char 	*crop_save(char *save, char c);
 void	ft_bzero(void *s, size_t n);
+void	*free_ft(char *str);
 
 #endif

@@ -6,24 +6,22 @@
 /*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 09:35:20 by rofontai          #+#    #+#             */
-/*   Updated: 2022/12/13 17:02:38 by rofontai         ###   ########.fr       */
+/*   Updated: 2022/12/15 09:20:06 by rofontai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-char *ft_read(int fd, char *save)
+char	*ft_read(int fd, char *save)
 {
 	char	*buff;
 	int		byte;
 
-	if (!save)
-		save = calloc_ptr(sizeof(char), 1);
 	buff = calloc_ptr(sizeof(char), BUFFER_SIZE + 1);
 	if (!buff)
 		return (0);
 	byte = 1;
-	while(search_nline(save, '\n') == 0 && byte != 0)
+	while ((search_nline(buff, '\n') == 0 || !save) && byte != 0)
 	{
 		byte = read(fd, buff, BUFFER_SIZE);
 		if (byte == -1)
@@ -32,17 +30,18 @@ char *ft_read(int fd, char *save)
 			free(save);
 			return (0);
 		}
-		if (byte > 0)
-			save = join(save, buff);
-		ft_bzero(buff, BUFFER_SIZE + 1);
+		save = join(save, buff);
+		if (!save)
+			return (free_ft(save));
+		ft_bzero(buff, BUFFER_SIZE);
 	}
 	free(buff);
 	return (save);
 }
 
-void *calloc_ptr(size_t count, size_t size)
+void	*calloc_ptr(size_t count, size_t size)
 {
-		void	*ptr;
+	void	*ptr;
 
 	ptr = malloc(count * size);
 	if (!ptr)
@@ -51,17 +50,19 @@ void *calloc_ptr(size_t count, size_t size)
 	return (ptr);
 }
 
-char *join(char *save, char *buff)
+char	*join(char *save, char *buff)
 {
-	int i;
-	int j;
-	char *dest;
+	int		i;
+	int		j;
+	char	*dest;
 
 	i = 0;
 	j = 0;
+	if (!save)
+		save = calloc_ptr(sizeof(char), 1);
 	dest = calloc_ptr(sizeof(char), (lenstr(save) + lenstr(buff) + 1));
 	if (!dest)
-		return (0);
+		return (free_ft(save));
 	while (save[i])
 	{
 		dest[i] = save[i];
@@ -77,7 +78,7 @@ char *join(char *save, char *buff)
 	return (dest);
 }
 
-int lenstr(char *str)
+int	lenstr(char *str)
 {
 	int	i;
 
@@ -87,9 +88,9 @@ int lenstr(char *str)
 	return (i);
 }
 
-int search_nline(char *save, char c)
+int	search_nline(char *save, char c)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (save[i])
@@ -101,20 +102,20 @@ int search_nline(char *save, char c)
 	return (0);
 }
 
-char *extract_line(char *save, char c)
+char	*extract_line(char *save, char c)
 {
-	int i;
-	char *dest;
+	int		i;
+	char	*dest;
 
 	i = 0;
 	if (!save)
 		return (0);
-	while ( save[i])
+	while (save[i])
 		if (save[i++] == c)
-			break;
+			break ;
 	dest = calloc_ptr(sizeof(char), i + 1);
 	if (!dest)
-		return(0);
+		return (0);
 	i = 0;
 	while (save[i] && save[i] != c)
 	{
@@ -129,31 +130,30 @@ char *extract_line(char *save, char c)
 	return (dest);
 }
 
-char *crop_save(char *save, char c)
+char	*crop_save(char *save, char c)
 {
 	int		i;
 	int		start;
-	int		len;
 	char	*dest;
 
-	i = 0;
 	start = 0;
-	if (!save)
-		return (0);
 	while (save[start] && save[start] != c)
 		start++;
-	if (save[start] == c)
-		start++;
-	len = (lenstr(save) - start);
-	dest = calloc_ptr(sizeof(char), len + 1);
+	if (!save[start])
+		return (free_ft(save));
+	dest = calloc_ptr(sizeof(char), (lenstr(save) - start + 1));
 	if (!dest)
 		return (0);
-	while (i <= len && save[start + i])
+	start++;
+	i = 0;
+	while (save && save[start])
 	{
-		dest[i] = save[start + i];
+		dest[i] = save[start];
 		i++;
+		start++;
 	}
 	free(save);
+	save = NULL;
 	return (dest);
 }
 
@@ -171,4 +171,11 @@ void	ft_bzero(void *s, size_t n)
 		temp[i] = '\0';
 		i++;
 	}
+}
+
+void	*free_ft(char *str)
+{
+	if (str)
+		free(str);
+	return (0);
 }
